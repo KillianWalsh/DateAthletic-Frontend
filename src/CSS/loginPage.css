@@ -1,0 +1,365 @@
+body {
+    height: 110vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Created with https://www.css-gradient.com */
+    background: #D25F0D;
+    background: -webkit-linear-gradient(top left, #D25F0D, #EFAD7E);
+    background: -moz-linear-gradient(top left, #D25F0D, #EFAD7E);
+    background: linear-gradient(to bottom right, #D25F0D, #EFAD7E);
+    font-family: "Open Sans";
+    overflow: hidden;
+}
+
+:root{
+    --background-color: whitesmoke;
+
+}
+
+
+.slideOutMenu{
+    position: absolute;
+    width: 180px;
+    height: 100%;
+    top: 0;
+    right: -230px ;
+    padding: 20px;
+    background-color: #D25F0D;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+ul{
+    list-style: none;
+}
+
+li{
+    border-bottom: 2px solid rgba(255,255,255, 0.4);
+    padding:  20px 0;
+
+}
+
+li:last-child{
+    border-bottom: none;
+}
+
+li:hover{
+    color:rgba(255,255,255, 1);
+    cursor: pointer;
+}
+
+.menu-icon{
+    position: absolute;
+    color: #fff;
+    top: 18px;
+    right: 30px;
+    font-size: 24px;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+#menu-toggle{
+    display:none ;
+}
+
+#menu-toggle:checked ~ .slideOutMenu {
+    right: 0;
+}
+#menu-toggle:checked + .menu-icon {
+    right: 230px
+}
+
+#containerlogin {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 55vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    z-index: 50;
+    background: var(--background-color);
+    box-shadow: 0px 0px 10px 0px #d25f0d;
+
+}
+
+h2{
+    position: relative;
+    margin-top: -40px;
+    z-index: 5;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+label {
+    font-size: 0.9em;
+    color: #989898;
+    margin-bottom: 10px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.loginForm input {
+    margin-bottom: 30px;
+    width: 35vh;
+    height: 32px;
+    border: none;
+    border-bottom: 2px solid #d25f0d;
+    background: none;
+    outline: none;
+    font-weight: 200;
+    font-size: 15px;
+    font-size: 0.95em;
+    position: relative;
+}
+
+
+ .material-symbols-outlined {
+     font-variation-settings:
+             'FILL' 0,
+             'wght' 200,
+             'GRAD' 0,
+             'opsz' 24
+ }
+
+
+.input-container{
+    display: flex;
+    flex-direction: row-reverse;
+    top: 0;
+    left: 0;
+    align-self: start;
+    justify-self: start;
+}
+
+
+button[type="submit"] {
+    width: 80%;
+    height: 40px;
+    border: 1px solid;
+    font-size: 16px;
+    cursor: pointer;
+    outline: 0;
+    background: #d25f0d;
+    color: white;
+}
+
+.signUp{
+    margin-top: 35px;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 14px;
+    text-align: center;
+    color: #989898;
+}
+.signUp a{
+    text-decoration: none;
+    color: #d25f0d;
+
+}
+
+.signUp a:hover{
+    border-bottom: 1px solid #d25f0d;
+}
+
+.forgotPass{
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 14px;
+    text-align: center;
+    color: #989898;
+}
+.forgotPass a{
+    text-decoration: none;
+    color: #d25f0d;
+
+}
+
+.forgotPass a:hover{
+    border-bottom: 1px solid #d25f0d;
+}
+
+button:hover{
+    background: rgba(210, 95, 13, 0.68);
+}
+
+button{
+    border: none;
+    padding: 12px 30px;
+    background-color: #d25f0d;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -5px;
+    left: -5px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #d25f0d;
+    transition: all 0.25s;
+}
+button::after{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #d25f0d;
+    transition: all 0.25s;
+}
+button:hover::before,
+button:hover::after{
+    height: 100%;
+    width: 100%;
+
+}
+
+iframe {
+    display: block;
+    position: relative;
+    width: 95%;
+    height: 95%;
+    border-radius: 10%;
+    border: 6mm inset #d25f0d;
+    background: whitesmoke;
+}
+
+#modalBodyBackdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+
+}
+
+
+#modal-body{
+    width: 1000px;
+    height: 700px;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.close-button{
+    font-size: 10px;
+    position: relative;
+    left: 890px;
+    top: 80px;
+    z-index: 1;
+}
+
+
+.menu-item{
+    color: black;
+    text-decoration: none;
+}
+
+.menu-item:hover{
+    color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #visa-lösenord{
+        position: absolute;
+        left: 10%;
+        top: 59%;
+    }
+
+    #modal-body{
+        width: 370px;
+        height: 700px;
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: fit-content(100%);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-item {
+        border: 1px solid black;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    #stegTvåH2{
+        padding-top: 50px;
+    }
+
+    /* Steg 3 */
+    #containerBild {
+        display: grid;
+        grid-template-columns: fit-content(100%);
+        justify-content: center;
+        align-items: center;
+    }
+
+    #webcam{
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    #webbContainer{
+        position: fixed;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+
+    img{
+        width: 300px;
+        height: 400px;
+    }
+
+    #counter {
+        position: absolute;
+        bottom: -255%;
+        right: 10%;
+        font-size: 15px;
+        color: gray;
+    }
+
+    #stegTreH2{
+        padding-top: 50px;
+    }
+
+
+}
+
+
+

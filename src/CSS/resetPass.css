@@ -1,0 +1,47 @@
+body{
+    height: 100vh;
+   
+    background: #D25F0D;
+    background: -webkit-linear-gradient(top left, #D25F0D, #EFAD7E);
+    background: -moz-linear-gradient(top left, #D25F0D, #EFAD7E);
+    background: linear-gradient(to bottom right, #D25F0D, #EFAD7E);
+    font-family: "Open Sans";
+    overflow: hidden;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1{
+ text-align: center;
+ margin-top: 200px;
+  }
+  p{
+    text-align: center;
+    font-size: 18px;
+  }
+  input[type="email"] {
+    width: 35%;
+    padding: 10px;
+    margin: 60px;
+    font-size: 16px;
+    border: 1px solid #222;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+    input[type="email"] {
+      width: 80%;
+    }
+  }
+  

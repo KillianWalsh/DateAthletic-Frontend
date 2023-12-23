@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--  <script src="../javaScript/email.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javaScript/min-profil.js"></script>
+    <script src="../javaScript/formAndmin-profil.js"></script>
+            <script src="../javaScript/darkmode.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/settings.css">
+    <link rel="stylesheet" href="../CSS/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="../CSS/form.css">-->
+
+    <title>Kontoinställningar</title>
+</head>
+
+<body>
+<!---Meny-->
+<nav class="navbar">
+    <div class="logo" id="Date">Date<span class="text"><span class="tecken">|</span> Athletic</span></div>
+    <div class="min-profil">
+        <div class="profil-btn" onclick="toggle()">
+            <div class="profil-img"></div>
+
+            <span id="name">
+                    <i class="fa-solid fa-angle-down"></i>
+                  </span>
+        </div>
+
+
+        <ul class="dropdown-ul">
+            <li class="dropdown-li">
+                <a href="../html/swipe1.html">
+                    <i class="fa-solid fa-check"></i>
+                    Matchningar
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="../html/min-profil.html">
+                    <i class="fa-regular fa-user"></i>
+                    Min profil
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="../html/chat-startsida.html">
+                    <i class="fa-regular fa-envelope"></i>
+                    Chattrum
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="../html/settings.html">
+                    <i class="fa-solid fa-sliders"></i>
+                    Konto-Inställningar
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a href="../html/search.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Sök medlemmar
+                </a>
+            </li>
+            <li class="dropdown-li">
+                <a onclick="darkMode()">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                    Dark-Mode
+                </a>
+            </li>
+            <hr>
+            <li class="dropdown-li">
+                <a onclick="logout()">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="center">
+    <div class="form-input">
+        <a href="#" id="myBtn">
+            <div class="preview" id="preview">
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- Add your content here -->
+        <div id="containerBild">
+            <div class="foto" id="ett"><button class="deleteButton" id="deleteBild1" onclick="removeBild(1, event, 'ett', 1)" style="display: none"><span class="material-symbols-outlined symbol" style="color: white">delete</span></button><button type="button" onclick="startWebcam(1,'ett', true)" id="knappTillFoto1" class="fotoButton"><i class="fa fa-camera" style="font-size:36px"></i></button><label id="file-upload1" class="file-upload"><input  onchange="displayImage(1,'ett', 1)" type="file" multiple="multiple" name="fileToUpload"  id="fileToUpload1">Välj fil</label></div>
+            <div class="foto" id="två"><button class="deleteButton" id="deleteBild2" onclick="removeBild(2, event, 'två' , 1)" style="display: none"><span class="material-symbols-outlined symbol" style="color: white">delete</span></button><button type="button" onclick="startWebcam(2,'två', true)" id="knappTillFoto2" class="fotoButton"><i class="fa fa-camera" style="font-size:36px"></i></button><label id="file-upload2" class="file-upload"><input  onchange="displayImage(2,'två' , 1)" type="file" multiple="multiple" name="fileToUpload"  id="fileToUpload2">Välj fil</label></div>
+            <div class="foto" id="tre"><button class="deleteButton" id="deleteBild3" onclick="removeBild(3, event, 'tre' , 1)" style="display: none"><span class="material-symbols-outlined symbol" style="color: white">delete</span></button><button type="button" onclick="startWebcam(3,'tre', true)" id="knappTillFoto3" class="fotoButton"><i class="fa fa-camera" style="font-size:36px"></i></button><label id="file-upload3" class="file-upload"><input  onchange="displayImage(3,'tre' , 1)" type="file" multiple="multiple" name="fileToUpload"  id="fileToUpload3">Välj fil</label></div>
+            <div class="foto" id="fyra"><button class="deleteButton" id="deleteBild4" onclick="removeBild(4, event, 'fyra' , 1)" style="display: none"><span class="material-symbols-outlined symbol" style="color: white">delete</span></button><button type="button" onclick="startWebcam(4,'fyra', true)" id="knappTillFoto4" class="fotoButton"><i class="fa fa-camera" style="font-size:36px"></i></button><label id="file-upload4" class="file-upload"><input  onchange="displayImage(4,'fyra' , 1)" type="file" multiple="multiple" name="fileToUpload"  id="fileToUpload4">Välj fil</label></div>
+            <div class="foto" id="fem"><button class="deleteButton" id="deleteBild5" onclick="removeBild(5, event, 'fem' , 1)" style="display: none"><span class="material-symbols-outlined symbol" style="color: white">delete</span></button><button type="button" onclick="startWebcam(5,'fem', true)" id="knappTillFoto5" class="fotoButton"><i class="fa fa-camera" style="font-size:36px"></i></button><label id="file-upload5" class="file-upload"><input  onchange="displayImage(5,'fem' , 1)" type="file" multiple="multiple" name="fileToUpload"  id="fileToUpload5">Välj fil</label></div>
+            <div class="foto" id="sex"><button class="deleteButton" id="deleteBild6" onclick="removeBild(6, event, 'sex' , 1) " style="display: none"><span class="material-symbols-outlined symbol" style="color: white">delete</span></button><button type="button" onclick="startWebcam(6,'sex', true)" id="knappTillFoto6" class="fotoButton"><i class="fa fa-camera" style="font-size:36px"></i></button><label id="file-upload6" class="file-upload"><input  onchange="displayImage(6,'sex' , 1)" type="file" multiple="multiple" name="fileToUpload"  id="fileToUpload6">Välj fil</label></div>
+        </div>
+        <div id="webbContainer">
+            <video id="webcam" style="display:none;"></video>
+            <p id="countdown"></p>
+            <button id="check"  onclick="displayImageFromKamera(event, 1)" style="display:none;"><span class="material-symbols-outlined checkIcon" style="color: green">check_circle</span></button>
+            <button id="taBild" onclick="takePicture(event)" style="display:none;"><span class="material-symbols-outlined" style="color: white">add_circle</span></button>
+            <button id="taOmBild" style="display:none;"  onclick="retake(event)"><span class="material-symbols-outlined" style="color: white">sync</span></button>
+            <button id="close" style="display:none;" onclick="retake(event, 'close')"><span class="material-symbols-outlined" style="color: red">cancel</span></button>
+        </div>
+    </div>
+</div>
+
+
+<form class="settings" id="settings">
+
+    <input id="firstname" type="text" name="förnamn" placeholder="Förnamn" class="first" required>
+    <input type="text" name="efternamn" placeholder="Efternamn" class="first" required id="lastname">
+    <br>
+
+    <input type="email" name="email" placeholder="Email" class="first" required id="email">
+    <input type="text" name="stad" placeholder="Stad" class="first" required id="city">
+    <br>
+    <br>
+
+
+
+    <h4 id="textIdentifiera">Hur vill du identifiera dig?</h4>
+    <input type="radio" id="man" name="kön" value="MAN" class="kön" class="first" required>
+    <label for="man" class="textKön">Man</label>
+    <input type="radio" id="kvinna" name="kön" value="KVINNA" class="kön" class="first">
+    <label for="man" class="textKön">Kvinna</label>
+    <input type="radio" id="anpassat2" name="kön" value="ANPASSAT" class="kön" class="first">
+    <label for="man" class="textKön">Anpassat</label>
+    <div id="pronomen2" style="display: none">
+        <SELECT name = "pronomen" class="first" id="selectKön">
+            <option class="dropDownKön" value="Hen" selected>Hen: "Vill du träna med hen?"</option>
+            <option class="dropDownKön" value="Hon" >Hon: "Vill du träna med henne?"</option>
+            <option class="dropDownKön" value="Han ">Han: "Vill du träna med honom?"</option>
+            <option class="dropDownKön" value="Den/Det">Den/Det: "Vill du träna med den/det?"</option>
+        </SELECT>
+        <br>
+        <br>
+        <input type="text" placeholder="Kön (Valfritt)" class="first">
+    </div>
+    <br>
+    <br>
+
+    <h4>Vilka vill du träna med</h4>
+    <fieldset id="preferensCheckboxes">
+        <input type="checkbox" id="valMän" class="checkbox">
+        <label for="valMän">Män</label>
+        <input type="checkbox" id="valKvinnor" class="checkbox">
+        <label for="valKvinnor">Kvinnor</label>
+        <input type="checkbox" id="valÖvrigt" class="checkbox">
+        <label for="valÖvrigt">Övrigt</label>
+    </fieldset>
+    <br>
+
+    <h4>Vilka sporter är du intresserad av</h4>
+    <fieldset id ="sportCheckboxes">
+        <div class="grid-container">
+        </div>
+    </fieldset>
+    <div id="slidecontainer"></div>
+
+    <br>
+    <h4>Här kan du skriva en beskrivning om dig själv</h4>
+    <textarea id="myTextarea" maxlength="500" oninput="countChars(this)"></textarea>
+    <div id="counter">0/500</div>
+    <button type="submit" class="spara-btn" >Spara</button>
+</form>
+
+
+<script src="../javaScript/profil.js"></script>
+<script src="../javaScript/logout.js"></script>
+
+</body>
+
+</html>

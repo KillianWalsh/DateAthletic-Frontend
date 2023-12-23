@@ -1,0 +1,242 @@
+@media (max-width: 768px) { /* Av någon anledning så applicerades denna CSS på förstasidan när jag inte hade mediaquery här?!*/
+
+    :root{
+        --background-color: whitesmoke;
+
+    }
+
+    .logo{
+    margin-left:10px;
+    font-size: 18px;
+}
+.login-out{
+   display: none;
+}
+#hide-loginBtn {
+ display: block;
+ text-decoration: none;
+ color: black;
+}
+.page-title{
+    margin:60px;
+    font-weight: 100;
+}
+.page-p{
+    margin:60px;
+   
+}
+
+.skapaKonto{
+    margin-right: 200px;
+}
+
+#cards{
+    display: grid;
+    padding: 70px;
+    background: var(--background-color);
+}
+
+
+
+
+#what .items{
+    display: block;
+    padding: 1.5rem;
+}
+#what .items .item{
+    display: flex;
+   
+}
+#what .items .item i{
+    margin-right: 1.3rem;
+    align-self: center;
+    margin-bottom: 0;
+}
+#what .items .item p{
+    padding: 2rem;
+    margin-left: 60px;
+    position:absolute;
+   
+    
+}
+
+
+
+#cards{
+    display: grid;
+    background: whitesmoke;
+    height: 400vh;
+}
+#cards .m-heading{
+    position: relative;
+    top: -30px;
+    right: -60px;
+    font-size: 24px;
+
+
+
+}
+#cards .card{
+    display: grid;
+    grid-template-rows: 240px 180px 80px;
+    
+   
+}
+.container2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+   
+    
+    margin-top: 550px;
+    margin-left: 20%;
+
+}
+.container2 .icon{
+    position: relative;
+    left:-50%;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    
+}
+.container2 .icon .images{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    margin-top: 60%;
+    margin-left: 50%;
+    transform: rotate(calc(360deg/5 * var(--i)));
+    transform-origin: 200px;  
+    z-index: 100;
+    overflow: hidden;
+}
+.container2 .icon .images img{
+    transform: rotate(calc(-360deg/5* var(--i)));
+
+    
+}
+.animation .icon-inside i{
+    margin-left: 0%;
+    padding: 135px;
+    font-size: 30px;
+
+  }
+#images .knapp{
+    position: relative;
+    top: 20px;
+    left: 120px;
+}
+#images p{
+    top: 210px;
+    left: -80px;
+    font-size: 22px;
+}
+
+#close-button{
+    margin-left: 100px;
+    font-size: 4px;
+    padding: 4px 10px;
+}
+
+
+.nextStep{
+    bottom: -100px;
+    border: 3px;
+    font-size: 12px;
+}
+/**/
+    #showcase .showcase-content{
+
+        color: #fff;
+        text-align: center;
+        padding-top: 170px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Steg 2 */
+    #visa-lösenord{
+        position: absolute;
+        left: 10%;
+        top: 59%;
+    }
+
+    #modal-body{
+        width: 370px;
+        height: 700px;
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: fit-content(100%);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-item {
+        border: 1px solid black;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    #stegTvåH2{
+        padding-top: 50px;
+    }
+
+    /* Steg 3 */
+    #containerBild {
+        display: grid;
+        grid-template-columns: fit-content(100%);
+        justify-content: center;
+        align-items: center;
+    }
+
+    #webcam{
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    #webbContainer{
+        position: fixed;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+
+    img{
+        width: 300px;
+        height: 400px;
+    }
+
+   #counter {
+        position: absolute;
+        bottom: -255%;
+        right: 10%;
+        font-size: 15px;
+        color: gray;
+    }
+
+    #stegTreH2{
+        padding-top: 50px;
+    }
+
+footer{
+
+    position:absolute;
+    margin-top: 2600px;
+    left: 0;
+    right: 0;
+ 
+}
+
+}
+
